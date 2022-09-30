@@ -45,6 +45,17 @@ def test_get_student_with_more_classes():
     )
 
     # TODO: write assertions
+    #act
+    result = get_student_with_more_classes(charles, ada)
 
+    #assert
+    assert result == ada 
 
 # TODO: Write additional tests to reach 100% test coverage
+
+def test_courses_empty_if_not_courses():
+    courses = []
+
+    result = create_student("Ada Lovelace", "sophmore", courses)
+
+    assert result == []
